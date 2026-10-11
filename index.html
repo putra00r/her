@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#254f35">
+<title>Dunia Herbivora</title>
+<style>
+  :root {
+    --bg: #f4f8ef; --ink: #20372a; --muted: #66796a;
+    --green: #2f7045; --lime: #dff29a; --card: #fff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+  .page { width: min(100%, 760px); margin: 0 auto; padding: 0 16px 34px; }
+  .hero {
+    position: relative; overflow: hidden; margin: 0 -16px 24px; padding: 30px 22px 28px;
+    color: white; background: radial-gradient(circle at 90% 10%, #8bbd65 0, transparent 34%), linear-gradient(140deg, #173d2b, #2f7045 72%, #6e9d4e);
+    border-radius: 0 0 28px 28px;
+  }
+  .eyebrow { display: inline-block; padding: 6px 11px; border-radius: 999px; background: rgba(223,242,154,.17); color: var(--lime); font-size: 11px; font-weight: 800; letter-spacing: 1.4px; }
+  h1 { margin: 14px 0 8px; font-size: clamp(30px, 8vw, 43px); line-height: 1.08; }
+  .hero p { max-width: 490px; margin: 0; color: #e4f1e4; font-size: 14px; }
+  .hero-art { position: absolute; right: 13px; bottom: 7px; font-size: 76px; opacity: .18; transform: rotate(-12deg); }
+  .intro { display: flex; align-items: center; gap: 10px; margin: 0 0 17px; }
+  .dot { width: 9px; height: 9px; background: #7eaa45; border-radius: 50%; flex: 0 0 auto; }
+  .intro p { margin: 0; color: var(--muted); font-size: 13px; }
+  .animal-card { overflow: hidden; margin: 0 0 18px; background: var(--card); border: 1px solid #e5ecdf; border-radius: 22px; box-shadow: 0 8px 24px rgba(30,65,37,.06); }
+  .animal-top { display: flex; align-items: center; gap: 15px; padding: 18px 18px 14px; }
+  .animal-emoji { display: grid; place-items: center; width: 88px; height: 88px; flex: 0 0 88px; border-radius: 20px; font-size: 54px; }
+  .elephant { background: linear-gradient(145deg,#e3edf1,#b9d1d6); }
+  .rabbit { background: linear-gradient(145deg,#fff0dc,#f4d4ae); }
+  .giraffe { background: linear-gradient(145deg,#fff0bd,#f2cf72); }
+  .number { color: #7b8b7d; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; }
+  h2 { margin: 3px 0 1px; font-size: 23px; line-height: 1.2; }
+  .latin { margin: 0; color: var(--muted); font-size: 12px; font-style: italic; }
+  .tag { display: inline-block; margin-top: 8px; padding: 4px 9px; border-radius: 999px; background: #edf5e6; color: #37633f; font-size: 10px; font-weight: 800; }
+  .animal-body { padding: 0 18px 18px; }
+  .description { margin: 0 0 15px; color: #4f6155; font-size: 13px; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  .fact { min-width: 0; padding: 11px 12px; border-radius: 13px; background: #f5f8f2; }
+  .label { display: block; margin-bottom: 3px; color: #718078; font-size: 10px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; }
+  .value { display: block; color: #263b30; font-size: 12px; font-weight: 600; line-height: 1.45; }
+  .fun { display: flex; gap: 10px; margin-top: 11px; padding: 12px; border-radius: 13px; background: #fff9e9; color: #6e5520; font-size: 12px; }
+  .fun strong { display: block; margin-bottom: 2px; }
+  .bottom-note { padding: 17px; border-radius: 18px; background: #e6efdf; text-align: center; }
+  .big { font-size: 25px; }
+  .bottom-note p { margin: 4px 0 0; color: #4f6255; font-size: 12px; }
+  footer { padding: 18px 0 0; color: #829087; text-align: center; font-size: 10px; }
+  @media (max-width: 380px) {
+    .animal-top { gap: 11px; padding: 15px 14px 12px; }
+    .animal-emoji { width: 72px; height: 72px; flex-basis: 72px; font-size: 45px; border-radius: 17px; }
+    h2 { font-size: 21px; } .animal-body { padding: 0 14px 14px; }
+    .facts { gap: 7px; } .fact { padding: 9px; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <span class="eyebrow">KENALI SATWA ALAM</span>
+    <h1>Dunia<br>Herbivora 🌿</h1>
+    <p>Kenalan dengan hewan pemakan tumbuhan, dari raksasa berhidung panjang hingga pelompat mungil yang lincah.</p>
+    <div class="hero-art" aria-hidden="true">🌱</div>
+  </header>
+
+  <div class="intro"><span class="dot"></span><p><strong>3 hewan • Fakta singkat • Tampilan ramah HP</strong></p></div>
+
+  <article class="animal-card">
+    <div class="animal-top">
+      <div class="animal-emoji elephant" role="img" aria-label="Gajah">🐘</div>
+      <div><div class="number">HEWAN 01</div><h2>Gajah Asia</h2><p class="latin">Elephas maximus</p><span class="tag">Raksasa Lembut</span></div>
+    </div>
+    <div class="animal-body">
+      <p class="description">Gajah Asia adalah mamalia besar dengan belalai kuat yang digunakan untuk mengambil makanan, minum, mencium bau, dan berkomunikasi. Gajah hidup dalam kelompok sosial, terutama kelompok betina dan anak-anaknya.</p>
+      <div class="facts">
+        <div class="fact"><span class="label">🌍 Habitat</span><span class="value">Hutan tropis, padang rumput, dan kawasan berhutan di Asia Selatan serta Asia Tenggara.</span></div>
+        <div class="fact"><span class="label">🌿 Makanan</span><span class="value">Rumput, daun, kulit kayu, akar, dan buah-buahan.</span></div>
+        <div class="fact"><span class="label">📏 Ukuran</span><span class="value">Tinggi bahu umumnya sekitar 2–3,5 m, bergantung jenis kelamin dan individu.</span></div>
+        <div class="fact"><span class="label">☀️ Aktivitas</span><span class="value">Mencari makan selama berjam-jam, berpindah untuk menemukan tumbuhan dan air.</span></div>
+      </div>
+      <div class="fun"><span>💡</span><div><strong>Fakta menarik</strong>Belalai gajah memiliki ribuan otot dan sangat terampil untuk mengambil benda kecil maupun mengangkat ranting.</div></div>
+    </div>
+  </article>
+
+  <article class="animal-card">
+    <div class="animal-top">
+      <div class="animal-emoji rabbit" role="img" aria-label="Kelinci">🐇</div>
+      <div><div class="number">HEWAN 02</div><h2>Kelinci</h2><p class="latin">Oryctolagus cuniculus</p><span class="tag">Pelompat Lincah</span></div>
+    </div>
+    <div class="animal-body">
+      <p class="description">Kelinci adalah mamalia kecil dengan telinga panjang dan kaki belakang yang kuat. Kelinci mengunyah tumbuhan berserat dan memiliki sistem pencernaan yang membantu memanfaatkan nutrisi dari makanannya.</p>
+      <div class="facts">
+        <div class="fact"><span class="label">🌍 Habitat</span><span class="value">Padang rumput, semak belukar, tepi hutan, serta lingkungan yang cocok untuk membuat liang.</span></div>
+        <div class="fact"><span class="label">🌿 Makanan</span><span class="value">Rumput, daun, tanaman hijau, dan jerami; kelinci peliharaan perlu pakan yang sesuai.</span></div>
+        <div class="fact"><span class="label">📏 Ukuran</span><span class="value">Kelinci Eropa dewasa biasanya memiliki panjang tubuh sekitar 35–50 cm.</span></div>
+        <div class="fact"><span class="label">🌅 Aktivitas</span><span class="value">Sering aktif saat fajar dan senja, ketika suasana lebih sejuk dan tenang.</span></div>
+      </div>
+      <div class="fun"><span>💡</span><div><strong>Fakta menarik</strong>Gigi kelinci terus tumbuh sepanjang hidupnya, sehingga makanan berserat membantu proses mengikis gigi.</div></div>
+    </div>
+  </article>
+
+  <article class="animal-card">
+    <div class="animal-top">
+      <div class="animal-emoji giraffe" role="img" aria-label="Jerapah">🦒</div>
+      <div><div class="number">HEWAN 03</div><h2>Jerapah</h2><p class="latin">Giraffa camelopardalis</p><span class="tag">Leher Menjulang</span></div>
+    </div>
+    <div class="animal-body">
+      <p class="description">Jerapah dikenal karena leher dan kakinya yang panjang. Bentuk tubuhnya membantu menjangkau daun di bagian atas pohon, tempat yang sulit dijangkau banyak herbivora lain.</p>
+      <div class="facts">
+        <div class="fact"><span class="label">🌍 Habitat</span><span class="value">Sabana, padang rumput terbuka, dan hutan terbuka di Afrika.</span></div>
+        <div class="fact"><span class="label">🌿 Makanan</span><span class="value">Daun, tunas, dan ranting pohon, terutama akasia.</span></div>
+        <div class="fact"><span class="label">📏 Ukuran</span><span class="value">Jerapah dewasa dapat mencapai tinggi sekitar 4,5–6 m.</span></div>
+        <div class="fact"><span class="label">☀️ Aktivitas</span><span class="value">Menghabiskan banyak waktu untuk makan dan berpindah mencari dedaunan.</span></div>
+      </div>
+      <div class="fun"><span>💡</span><div><strong>Fakta menarik</strong>Setiap jerapah memiliki pola bercak yang unik. Lidahnya panjang dan membantu meraih daun dari ranting berduri.</div></div>
+    </div>
+  </article>
+
+  <section class="bottom-note">
+    <div class="big">🌿 🐾 🌳</div>
+    <strong>Jaga tumbuhan, jaga kehidupan!</strong>
+    <p>Herbivora membantu menyebarkan biji dan menjadi bagian penting dari rantai makanan. Setiap makhluk hidup punya peran di alam.</p>
+  </section>
+  <footer>Materi edukasi • Dunia Herbivora</footer>
+</main>
+</body>
+</html>
